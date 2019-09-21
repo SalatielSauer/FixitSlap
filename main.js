@@ -2,19 +2,20 @@ window.onload = function(){
 	frame = document.getElementById("frame");
 	frames = document.getElementById("frames");
 	pscore = document.getElementById("score");
-	score = 0;
-	curimg = 25;
-	oldx = 0;
-	loaded = 0;
 	preloadframes();
+	refreshimg();
 };
 
+score = 0;
+curimg = 0;
+oldx = 0;
+loaded = 0;
+
 function preloadframes(){
-	for (i = 0; i <= 50; i++){
+	for (i = 1; i <= 50; i++){
 		frames.innerHTML += '<img draggable="false" class="frame" id="frame-' + i + '" src="sprites/00' + i + '.jpg"/>';
-		if (i == 50){
-			loaded = 1;
-		};
+
+		if (i == 50){loaded = 1};
 	};
 };
 
